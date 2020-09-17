@@ -5,11 +5,10 @@ import sys
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
-    # Tenta se conectar ao servidor
     s.connect(("localhost", 8081))
 except Exception as erro:
     print(str(erro))
-    sys.exit(1)  # Termina o programa
+    sys.exit(1)
 
 msg_server = s.recv(4048)
 
